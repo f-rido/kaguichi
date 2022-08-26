@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><!-- viewport レスポンシブ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" rel="stylesheet"><!--FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><!--GoogleFonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!--GoogleFonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Noto+Serif+JP&family=Quicksand:wght@700&display=swap" rel="stylesheet"><!--GoogleFonts -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"><!-- Slik(スライダー)のcss -->
+  <link rel="stylesheet" href="reset.css"><!-- リセットcss -->
+  <link rel="stylesheet" href="header.css"><!-- ヘッダーcss -->
+  <link rel="stylesheet" href="main.css"><!-- メインcss -->
+  <link rel="stylesheet" href="footer.css"><!-- フッターcss -->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"
+></script>
+<script>
+  //共通パーツ読み込み
+  $(function () {
+    $("header").load("header.html");
+    $("footer").load("footer.html");
+  });
+</script>
+  <title>KAGUICHI</title>
+</head>
+<body>
+  <header class="header"></header><!-- /header -->
+    <!--スライダー -->
+    <div class="top-wrapper">
+      <p class="catch-copy">自分らしさを<br class="catch-copy-br">レイアウトする</p>
+      <ul class="slider">
+        <li class="slider-item slider-item01"></li>
+        <li class="slider-item slider-item02"></li>
+        <li class="slider-item slider-item03"></li>
+      </ul>
+    </div>
+    <!--/top-wrapper -->
+    
+    <section class="news"><!--section お知らせ -->
+      <div class="news-wrapper">
+        <div class="news-container">
+          <h2 class="sec-ttl-cmn">お知らせ</h2>
+          <p class="sec-ttl-en">NEWS</p>
+          <div class="grid-2l-2c">
+            <a href="#" class="news-link">
+              <div class="news-col">
+                <span class="news-date">2020.01.28</span>
+                <span class="news-category">ニュースリリース</span>
+                <h3 class="news-title">「KAGU FANTASIA」が2020年X月XX日（月）東京・原宿にオープン</h3>
+              </div>
+            </a>
+            <a href="" class="news-link">
+              <div class="news-col">
+                <span class="news-date">2020.01.12</span>
+                <span class="news-category">ニュースリリース</span>
+                <h3 class="news-title">新春キャンペーンを実施</h3>
+              </div>
+            </a>
+            <a href="" class="news-link">
+              <div class="news-col">
+                <span class="news-date">2019.12.26</span>
+                <span class="news-category">お知らせ</span>
+                <h3 class="news-title">年末年始の営業日についてのお知らせ</h3>
+              </div>
+            </a>
+            <a href="" class="news-link">
+              <div class="news-col">
+                <span class="news-date">2019.11.09</span>
+                <span class="news-category">ニュースリリース</span>
+                <h3 class="news-title">人気ライフスタイル雑誌『KAGUGU』とのコラボ商品が登場</h3>
+              </div>
+            </a>
+          </div><!--/news-grid -->
+          <button type="button" name="" class="btn-cmn hover-black" tabindex="5" accesskey="B" onclick="">お知らせ一覧へ</button>
+        </div><!--/news-container -->
+      </div><!-- news-wrapper -->
+    </section><!--/info -->
+
+    <section class="furniture">
+      <!--section 取扱い家具 -->
+      <div class="furniture-container">
+        <h2 class="sec-ttl-cmn">取扱い家具</h2>
+        <p class="sec-ttl-en">FURNITURE</p>
+    
+        <div class="grid-2l-2c grid-furniture">
+          <div class="furniture-col-cmn">
+            <img src="img_furniture_01.png" alt="" class="furniture-img">
+          </div>
+    
+          <div class="furniture-col-cmn furniture-col-txt">
+              <h3 class="search-title fs-24">テーマで探す</h3>
+              <p class="furniture-txt">モダン、ナチュラル、北欧、ヴィンテージ、和風、ハワイアン、アメリカン、ミニマルなど、テーマごとに家具をお探しいただけます。</p>
+              <button type="button" name="" class="btn-cmn btn-l hover-black" tabindex="5" accesskey="B" onclick="">取扱い家具の一覧へ</button>
+          </div>
+    
+          <div class="furniture-col-cmn furniture-col-txt sp-bottom">
+            <h3 class="search-title fs-24">カラーで探す</h3>
+            <p class="furniture-txt">レッド、ブルー、グリーン、イエロー、オレンジ、ピンク、パープル、ベージュ・アイボリー、ブラウン、ブラック、グレー、ホワイトなど、好みのカラーごとに家具をお探しいただけます。</p>
+            <button type="button" name="" class="btn-cmn btn-l hover-black" tabindex="5" accesskey="B" onclick="">取扱い家具の一覧へ</button>
+          </div>
+    
+          <div class="furniture-col-cmn sp-top">
+            <img src="img_furniture_02.png" alt="" class="furniture-img">
+          </div>
+        </div><!--grid-2l-2c -->
+
+        <div class="grid-1l-3c">
+          <div class="furniture-col-cmn">
+            <img src="img_furniture_03.png" alt="" class="furniture-img">
+            <h3 class="search-title fs-20">シーンで探す</h3>
+            <p class="furniture-txt">
+              「リビング」や「ダイニング」、「寝室・ベッドルーム」、「キッチン」、「玄関・エントランス」、「書斎・ホームオフィス」などのシーンから、それぞれのシーンで使用する家具をお探しいただけます。</p>
+            <button type="button" name="" class="btn-cmn hover-black" tabindex="5" accesskey="B" onclick="">取扱い家具の一覧へ</button>
+          </div>
+        
+          <div class="furniture-col-cmn">
+            <img src="img_furniture_04.png" alt="" class="furniture-img">
+            <h3 class="search-title fs-20">ブランドで探す</h3>
+            <p class="furniture-txt">他では出会えないソファやチェアが見つかります。
+              当社ブランド以外でも、セレクトラインアップの中で多数のブランドをお取扱いしております。</p>
+            <button type="button" name="" class="btn-cmn hover-black" tabindex="5" accesskey="B" onclick="">取扱い家具の一覧へ</button>
+          </div>
+        
+          <div class="furniture-col-cmn">
+            <img src="img_furniture_05.png" alt="" class="furniture-img">
+            <h3 class="search-title fs-20">素材で探す</h3>
+            <p class="furniture-txt">
+              チークやパイン、マホガニーやウォールナットなどの木材から、ファブリックやラタンなどの布・繊維、ステンレスやロートアイアンのような金属まで、あらゆる素材を使用した家具を取り揃えております。</p>
+            <button type="button" name="" class="btn-cmn hover-black" tabindex="5" accesskey="B" onclick="">取扱い家具の一覧へ</button>
+          </div>
+        </div>
+        <!--grid-1l-3c -->
+      </div><!--/furniture-container -->
+    </section><!--/furniture -->
+
+    <section class="item-info"><!--section item-info -->
+      <div class="item-info-container">
+      
+        <div class="grid-2l-3c">
+          <div>
+            <img src="img_store.png" alt="" class="item-info-img">
+          </div>
+      
+          <div>
+            <h3 class="search-title fs-20 ttl-mb30">販売店・展示場一覧</h3>
+            <p class="furniture-txt txt-mb-40">KAGUの販売店をご覧いただけます。<br>
+              また、KAGUの家具は全国のショールームにてご覧いただけます。</p>
+            <button type="button" name="" class="btn-cmn btn-l btn-item-info" tabindex="5" accesskey="B"
+              onclick="">販売店・展示場一覧を見る<span class="arrow"><img src="arrow.png" alt=""></span></button>
+          </div>
+      
+          <div class="furniture-col-cmn">
+            <img src="img_online.png" alt="" class="item-info-img">
+          </div>
+      
+          <div class="furniture-col-cmn">
+            <h3 class="search-title fs-20 ttl-mb30">ONLINE STORE</h3>
+            <p class="furniture-txt txt-mb-40">KAGUの家具はオンラインストアでもご購入いただけます。</p>
+            <button type="button" name="" class="btn-cmn btn-l btn-item-info" tabindex="5" accesskey="B"
+              onclick="">オンラインストアを見る<span class="arrow"><img src="arrow.png" alt=""></span></button>
+          </div>
+        </div><!--grid-2l-3c -->
+
+    </div><!--/item-info-container -->
+    </section><!--/item-info -->
+
+    <section class="recruit">
+      <div class="dark">
+        <div class="recruit-cntainer">
+    
+          <h2 class="sec-ttl-cmn fc-white">採用情報</h2>
+          <p class="sec-ttl-en fc-white">RECRUIT</p>
+    
+          <p class="txt-recruit">KAGUICHIの新卒・中途採用情報を掲載しております。<br>アルバイト情報についても掲載しております。</p>
+
+          <button type="button" name="" class="btn-cmn bg-clear hover-white" tabindex="5" accesskey="B" onclick="">採用情報一覧へ</button>
+    
+        </div>
+      </div>
+    </section>
+    <!--/recruit -->
+  <footer class="footer"></footer><!-- /footer -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
