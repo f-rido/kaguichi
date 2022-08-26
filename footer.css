@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+*{
+  font-family: 'Noto Sans JP';
+  font-weight: normal;
+}
+
+.footer-container{
+  max-width: 1300px;
+  padding: 80px 40px 40px;
+  margin: 0 auto;
+}
+
+  .footer-top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+  }
+
+  .footer-top a{
+    transition-duration: 0.3s;
+  }
+
+  .footer-top a:hover{
+    opacity: 0.7;
+    transition-duration: 0.3s;
+  }
+
+      .footer-logo{
+        padding-bottom: 40px;
+        font-size: 3em;
+        margin-top: -10px;
+      }
+
+      .company p{
+        line-height: 30px;
+      }
+
+  .footer-menu{
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+  }
+
+
+    .main-menu{
+      margin-bottom: 32px;
+    }
+
+    .sub-menu{
+      padding: 15px;
+    }
+
+    .sub-menu-list{
+      margin-bottom: 10px;
+    }
+
+    .sub-menu-name{
+      padding: 0;
+    }
+
+  .footer-end{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+  }
+
+
+   /* W560～960pxのレイアウト */
+   @media screen and (min-width:560px) and ( max-width:960px) {
+    .footer-menu{
+      flex-direction: column;
+      gap: 0px;
+    }
+  }
+  /* W560～960px-END */
+
+  /* W559px以下のレイアウト */
+  @media screen and (max-width: 559px) {
+    .footer-container{
+      padding: 0;
+    }
+
+    .footer-logo{
+      padding-bottom: 12px;
+    }
+
+    .footer-top{
+      flex-direction: column;
+      padding-bottom: 0px;
+    }
+    .company{
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #6e6e6e;
+      width: 100%;
+    }
+
+    .footer-menu{
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .main-menu{
+      margin-bottom: 0px;
+      border-bottom: 0.5px solid #6e6e6e;
+      line-height: 50px;
+    }
+
+    .sub-main-list{
+      border-bottom: 0.5px solid #6e6e6e;
+    }
+
+    .menu-name,
+    .js-aco,
+    .sub-menu-name
+    {
+      display: block;
+      padding: 0 12px;
+      position: relative;
+    }
+
+    /* メニュー右端の矢印 */
+    .menu-name::before,
+    .sub-menu-name::before {
+      background-color: rgb(255, 255, 255);
+      position: absolute;
+      top: 50%;
+      right: 13px;
+      width: 20px;
+      height: 2px;
+      margin-top: 0px;
+      content: "";
+    }
+    .menu-name::after,
+    .sub-menu-name::after {
+      position: absolute;
+      top: 50%;
+      right: 14px;
+      width: 12px;
+      height: 12px;
+      margin-top: -6px;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      border-top: 2px solid rgb(255, 255, 255);
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+    }
+    /*  アコーディオンメニュー最初は非表示   */
+      .sub-menu{
+        display: none;
+      }
+
+        .sub-menu-list{
+          line-height: 50px;
+        }
+
+         /*  アコーディオンメニューの三角矢印  */
+        .js-aco::after {
+          border-right: solid 2px rgb(255, 255, 255);
+          border-top: solid 2px rgb(255, 255, 255);
+          content: "";
+          display: block;
+          height: 15px;
+          position: absolute;
+          right: 14px;
+          top: 25%;
+          transform: rotate(135deg); 
+          transition: transform .3s ease-in-out, top .3s ease-in-out;
+          width: 15px;
+        }
+        /*  is-activeが付いたら矢印が回転する  */
+        .is-active::after {
+          top: 45%;
+          transform: rotate(-45deg); 
+        }
+
+        .is-active{
+          display: block;
+        }
+
+    .footer-end{
+      flex-direction: column;
+      text-align: center;
+      padding: 14px 0;
+    }
+
+    .footer-end p{
+     line-height: 40px;
+    }
+  }
+ /* W559以下-END */

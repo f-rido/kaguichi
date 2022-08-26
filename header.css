@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+*{
+  font-family: 'Noto Sans JP';
+}
+
+body{
+  width: 100%;
+}
+
+.header{
+  width: 100%;
+  background-color: #f7f6f5;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+  .header_container{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+    .logo{
+      padding: 0 0 0 40px;
+      font-size: 3em;
+      line-height: 60px;
+    }
+
+      .logo a{
+      text-decoration: none;
+      color: #24a2b3;
+      }
+
+    .menu{
+      display: flex;
+    }
+
+      .menu-list{
+          height: 80px;
+          padding: 28px 20px;
+        }
+
+      .logo:hover,
+      .menu-list:hover{
+        cursor: pointer;
+        opacity: 0.6;
+        transition-duration: 0.3s;
+      }
+
+      .menu-list a{
+        text-decoration: none;
+        color:#000000;
+        font-size: 1em;
+      }
+
+      .online a,
+      .contact a{
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      .online{
+        background-color:  #24a2b3;
+      }
+
+      .contact {
+      background-color: #aa8f7b;
+      }
+
+      .fa-solid{
+        margin-right: 8px;
+      }
+
+      /* ハンバーガーアイコンとスマホメニューの非表示（ 1024px以上）*/
+      .hamburger-box,
+      .sp-nav
+      {
+        display: none;
+      }
+
+/* 1024px以下のレイアウト */
+@media screen and (max-width: 1024px) {
+  .header_container{
+    height: 60px;
+  }
+
+  .logo {
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  /* PC用のヘッダー非表示 */
+  .pc-nav{
+    display: none;
+  }
+
+  /* ハンバーガーメニュー */
+  /* （1）ハンバーガーメニューのボックス */
+  .hamburger-box {
+    position: relative; /* ハンバーガー横線の基準とするため */
+    display: block;
+    width: 30px;
+    height: 25px;
+    margin: 0 40px 0 auto;
+ }
+
+ /* （2）ハンバーガーメニューのセンターライン */
+  .hamburger-box-centerLine {
+    position: absolute;
+    top: 50%;/* 真ん中の高さにする*/
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    transform: translateY(-50%);/* 要素の半分を上にズラす*/
+  }
+
+  /* （3）ハンバーガーメニューの上段ライン */
+  .hamburger-box::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color:  rgb(0, 0, 0);
+ }
+
+ /* （4）ハンバーガーメニューの下段ライン */
+  .hamburger-box::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 70%;
+      height: 2px;
+      background-color:  rgb(0, 0, 0);
+  }
+
+   /* スマホメニュー */
+  .sp-nav {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    transition: all .2s ease-in-out;
+    opacity: 0; /* 透明にする */
+    transform: translateY(-100%);
+    /* 画面の外（上）に出す  */
+  }
+
+    .sp-menu {
+      display: flex;
+      flex-direction: column; /* 縦並び */
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .sp-menu-list{
+      font-size: 15px;
+      color: #fff;
+      display: block;
+      padding: 20px 0; /* タップし易くする処理 */
+    }
+
+  /* 「閉じる」につける✕の装飾 */
+  .close {
+    position: relative;
+    padding-left: 20px; /* ✕マークとの余白（間隔） */
+  }
+
+  /*バツ印線1*/
+  .close::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: #fff;
+    transform: rotate( 45deg ); /* 横線を4時方向へ傾ける */
+  }
+  /*バツ印線2*/
+  .close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: #fff;
+    transform: rotate( -45deg );/* 横線を2方向へ傾ける */
+  }
+
+  .toggle {
+    transform: translateY( 0 );
+    opacity: 1;
+  }
+}/* w1024px以下-END */
+
+/* W559px以下のレイアウト */
+@media screen and (max-width: 559px) {
+.logo {
+  padding: 0 40px;
+  font-size: 1.7em;
+}
+}/* w559px以下-END */
+
+
+
+
+
